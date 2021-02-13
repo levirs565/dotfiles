@@ -4,3 +4,4 @@ bat,$env:APPDATA,
 lf,$env:LOCALAPPDATA,
 PowerShell,$HOME\Documents,
 gitui,$env:APPDATA,
+starship,$HOME\.config,yes
