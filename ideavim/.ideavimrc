@@ -1,0 +1,6 @@
+let mapleader = "\"
+set incsearch
+set relativenumber
+set number
+nmap <leader>rn :action RenameElement<CR>
+nmap <leader>td :action CloseActiveTab<CR>
