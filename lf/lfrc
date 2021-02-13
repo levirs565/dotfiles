@@ -1,0 +1,7 @@
+set drawbox
+set previewer "bat"
+
+cmd mkdir %mkdir "$@"
+map a push :mkdir<space>
+
+map x :delete
