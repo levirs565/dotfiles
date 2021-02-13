@@ -1,2 +1,3 @@
 Source,DirDestination
 alacritty,$env:APPDATA
+bat,$env:APPDATA
