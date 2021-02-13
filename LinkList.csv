@@ -1,6 +1,6 @@
-Source,DirDestination
-alacritty,$env:APPDATA
-bat,$env:APPDATA
-lf,$env:LOCALAPPDATA
-PowerShell,$HOME\Documents
-gitui,$env:APPDATA
+Source,DirDestination,LinkChild
+alacritty,$env:APPDATA,
+bat,$env:APPDATA,
+lf,$env:LOCALAPPDATA,
+PowerShell,$HOME\Documents,
+gitui,$env:APPDATA,

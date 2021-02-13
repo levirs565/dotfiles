@@ -1,24 +1,40 @@
-$linkList = Import-Csv LinkList.csv
+$ErrorActionPreference = 'Stop'
+$dirList = Import-Csv LinkList.csv
 
-foreach ($link in $linkList) {
-  $sourceName = $link.Source
-  $sourcePath = Join-Path $PSScriptRoot $sourceName
+foreach ($dir in $dirList) {
+  $sourceName = $dir.Source
+  $sourceDir = Join-Path $PSScriptRoot $sourceName
 
-  $destDir = $link.DirDestination
-  $destDir = Invoke-Expression "Write-Output $destDir"
-  $destPath = Join-Path $destDir $sourceName
+  $destParent = $dir.DirDestination
+  $destDir = Invoke-Expression "Write-Output $destParent"
 
-  if (Test-Path $destPath) {
-    $destItem = Get-Item $destPath
-    if (($destItem.Target) -eq $sourcePath) {
-      Write-Host "Link $destPath is correct"
-      continue
-    } else {
-      Write-Error "Link $destPath is incorrect"
-      exit
+  if ($dir.LinkChild -ne 'yes') {
+    $linkList = @{
+      $sourceDir = Join-Path $destDir $sourceName
+    }
+  } else {
+    $linkList = @{}
+    Get-ChildItem $sourceDir | ForEach-Object {
+      $linkList += @{
+        $_.FullName = Join-Path $destDir $_.Name
+      }
     }
   }
-  
-  Write-Host Link $destPath to $sourcePath
-  New-Item -Type Junction -Path $destPath -Target $sourcePath
+
+  foreach ($linkSrc in $linkList.Keys) {
+    $linkDest = $linkList[$linkSrc]
+    if (Test-Path $linkDest) {
+      $destItem = Get-Item $linkDest
+      if (($destItem.Target) -eq $linkSrc) {
+        Write-Host "Link $linkDest is correct"
+        continue
+      } else {
+        Write-Error "Link $linkDest is incorrect"
+        exit
+      }
+    }
+    
+    Write-Host Linking $linkDest to $linkSrc
+    New-Item -Type SymbolicLink -Path $linkDest -Target $linkSrc
+  }
 }
