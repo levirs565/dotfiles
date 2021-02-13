@@ -1,0 +1,2 @@
+Source,DirDestination
+alacritty,$env:APPDATA
