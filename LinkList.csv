@@ -3,3 +3,4 @@ alacritty,$env:APPDATA
 bat,$env:APPDATA
 lf,$env:LOCALAPPDATA
 PowerShell,$HOME\Documents
+gitui,$env:APPDATA
