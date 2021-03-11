@@ -28,8 +28,7 @@ async function bat() {
   const file = path.join(__dirname, '../bat/config')
   let config = await fs.readFile(file, 'utf8')
 
-  let batTheme = 'gruvbox'
-  if (theme == 'light') batTheme += '-' + theme
+  let batTheme = `gruvbox-${theme}`
 
   config = config.replace(/(--theme)="[^"]+"/, `$1="${batTheme}"`)
   await fs.writeFile(file, config)
