@@ -41,8 +41,9 @@ async function nvim() {
 
   // Windows names pipe root
   const ipcDir = '\\\\.\\pipe\\\\'
+  const nvimIpcRegex = /nvim-\d+-\d/
   const ipcList = (await fs.readdir(ipcDir))
-    .filter(name => name.startsWith('nvim'))
+    .filter(name => nvimIpcRegex.test(name))
 
   if (ipcDir.length == 0) return
 
