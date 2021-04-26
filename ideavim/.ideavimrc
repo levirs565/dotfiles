@@ -3,4 +3,21 @@ set incsearch
 set relativenumber
 set number
 nmap <leader>rn :action RenameElement<CR>
-nmap <leader>td :action CloseActiveTab<CR>
+nmap <leader>q :action CloseEditor<CR>
+nmap <leader>qo :action CloseAllEditorsButActive<CR>
+nmap <leader>qq :action CloseAllEditors<CR>
+nmap <leader>qo :action CloseAllEditors<CR>
+nmap <leader>w :write<CR>
+
+nmap <leader>mz :action ToggleZenMode<CR>
+nmap <leader>mf :action ToggleFullScreen<CR>
+nmap gd <Action>(GotoTypeDeclaration)
+nmap gD <Action>(GotoDeclaration)
+nmap gi <Action>(GotoImplementation)
+nmap gr <Action>(FindUsages)
+nmap K :action QuickJavaDoc<CR>
+nmap <leader>ca <Action>(ShowIntentionActions)
+nmap <leader>f <Action>(ReformatCode)
+nmap <leader>d <Action>(ShowErrorDescription)
+nmap [d <Action>(GotoPreviousError)
+nmap ]d <Action>(GotoNextError)
