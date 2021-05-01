@@ -12,4 +12,10 @@ return {
     saturation = 1.0,
     brightness = 1.0,
   },
+  launch_menu = {
+    {
+      label = "Neovim",
+      args = { "nvim" }
+    }
+  }
 }
