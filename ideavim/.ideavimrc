@@ -6,7 +6,6 @@ nmap <leader>rn :action RenameElement<CR>
 nmap <leader>q :action CloseEditor<CR>
 nmap <leader>qo :action CloseAllEditorsButActive<CR>
 nmap <leader>qq :action CloseAllEditors<CR>
-nmap <leader>qo :action CloseAllEditors<CR>
 nmap <leader>w :write<CR>
 
 nmap <leader>mz :action ToggleZenMode<CR>
