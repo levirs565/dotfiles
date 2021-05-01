@@ -13,7 +13,7 @@ disabled = false
 format = "[$time]($style) "
 
 [aws]
-symbol = " "
+symbol = "  "
 
 [battery]
 full_symbol = ""
@@ -26,7 +26,10 @@ symbol = " "
 [dart]
 symbol = " "
 
-[docker]
+[directory]
+read_only = " "
+
+[docker_context]
 symbol = " "
 
 [elixir]
@@ -40,9 +43,6 @@ symbol = " "
 
 [golang]
 symbol = " "
-
-[haskell]
-symbol = " "
 
 [hg_branch]
 symbol = " "
@@ -82,6 +82,9 @@ symbol = " "
 
 [rust]
 symbol = " "
+
+[scala]
+symbol = " "
 
 [swift]
 symbol = "ﯣ "
