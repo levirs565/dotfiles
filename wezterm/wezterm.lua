@@ -6,7 +6,7 @@ return {
   force_reverse_video_cursor = true,
   color_scheme = "Gruvbox Light",
   default_prog = {"pwsh"},
-  default_cwd = "C:\\Users\\levir",
+  default_cwd = os.getenv("HOMEDRIVE") .. os.getenv("HOMEPATH"),
   foreground_text_hsb = {
     hue = 1.0,
     saturation = 1.0,
