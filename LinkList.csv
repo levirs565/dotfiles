@@ -8,3 +8,4 @@ starship,$HOME\.config,yes
 ideavim,$HOME,yes
 mpv,$HOME\scoop\persist\mpv\portable_config,yes
 ghc,$env:APPDATA\ghc,yes
+wezterm,$HOME\.config,
