@@ -9,7 +9,7 @@ return {
   font_size = 11.0,
   color_scheme = color,
   default_prog = {"pwsh"},
-  default_cwd = os.getenv("HOMEDRIVE") .. os.getenv("HOMEPATH"),
+  default_cwd = wezterm.home_dir,
   foreground_text_hsb = {
     hue = 1.0,
     saturation = 1.0,
