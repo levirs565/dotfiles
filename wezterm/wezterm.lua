@@ -19,10 +19,10 @@ return {
   },
   keys = {
     {
-      -- CTRL-m is equal to CTRL-ENTER
-      key = "m",
+      -- Map this to Alt-ENTER
+      key = "raw:13",
       mods = "CTRL",
-      action = wezterm.action{SendString="\x1b[20;5~"}
+      action = wezterm.action{SendString="\x1b\r"}
     }
-  },
+  }
 }
