@@ -16,5 +16,13 @@ return {
       label = "Neovim",
       args = { "nvim" }
     }
-  }
+  },
+  keys = {
+    {
+      -- CTRL-m is equal to CTRL-ENTER
+      key = "m",
+      mods = "CTRL",
+      action = wezterm.action{SendString="\x1b[20;5~"}
+    }
+  },
 }
