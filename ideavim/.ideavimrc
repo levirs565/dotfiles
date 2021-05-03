@@ -2,6 +2,8 @@ let mapleader = "\"
 set incsearch
 set relativenumber
 set number
+set NERDTree
+
 nmap <leader>rn :action RenameElement<CR>
 nmap <leader>q :action CloseEditor<CR>
 nmap <leader>qo :action CloseAllEditorsButActive<CR>
