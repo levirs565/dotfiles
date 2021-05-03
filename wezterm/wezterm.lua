@@ -1,9 +1,13 @@
 local wezterm = require 'wezterm';
 
+local file = io.open(wezterm.home_dir .. "/.wezterm_color", "r")
+local color = file:read("*l")
+file:close()
+
 return {
   font = wezterm.font("JetBrainsMono NF"),
   font_size = 11.0,
-  color_scheme = "Gruvbox Light",
+  color_scheme = color,
   default_prog = {"pwsh"},
   default_cwd = os.getenv("HOMEDRIVE") .. os.getenv("HOMEPATH"),
   foreground_text_hsb = {

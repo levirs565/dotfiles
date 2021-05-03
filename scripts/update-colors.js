@@ -7,7 +7,7 @@ const path = require('path')
 const os = require('os')
 const net = require('net')
 
-let theme
+let theme = ""
 if (new Date().getHours() >= 18)
   theme = 'dark'
 else theme = 'light'
@@ -59,6 +59,17 @@ async function nvim() {
   }
 }
 
+async function wezterm() {
+  const colorFile = path.join(os.homedir(), ".wezterm_color")
+  let colorScheme = "Gruvbox " + theme[0].toUpperCase() + theme.substring(1)
+  await fs.writeFile(colorFile, colorScheme)
+
+  const weztermConfigFile = path.join(__dirname, "../wezterm/wezterm.lua")
+  const weztermConfig = await fs.readFile(weztermConfigFile, "utf8") 
+  await fs.writeFile(weztermConfigFile, weztermConfig)
+}
+
 alacritty()
 bat()
 nvim()
+wezterm()
