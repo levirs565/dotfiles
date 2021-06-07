@@ -12,8 +12,8 @@ nmap <leader>w :write<CR>
 
 nmap <leader>mz :action ToggleZenMode<CR>
 nmap <leader>mf :action ToggleFullScreen<CR>
-nmap gd <Action>(GotoTypeDeclaration)
-nmap gD <Action>(GotoDeclaration)
+nmap gd <Action>(GotoDeclaration)
+nmap gD <Action>(GotoTypeDeclaration)
 nmap gi <Action>(GotoImplementation)
 nmap gr <Action>(FindUsages)
 nmap K :action QuickJavaDoc<CR>
