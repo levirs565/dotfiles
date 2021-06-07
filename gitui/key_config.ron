@@ -11,14 +11,20 @@
             bits: 0,
         ),
     ),
-    tab_stashing: (
+    tab_files: (
         code: Char('3'),
         modifiers: (
             bits: 0,
         ),
     ),
-    tab_stashes: (
+    tab_stashing: (
         code: Char('4'),
+        modifiers: (
+            bits: 0,
+        ),
+    ),
+    tab_stashes: (
+        code: Char('5'),
         modifiers: (
             bits: 0,
         ),
@@ -35,38 +41,32 @@
             bits: 1,
         ),
     ),
-    focus_workdir: (
+    toggle_workarea: (
         code: Char('w'),
         modifiers: (
             bits: 0,
         ),
     ),
-    focus_stage: (
-        code: Char('s'),
-        modifiers: (
-            bits: 0,
-        ),
-    ),
     focus_right: (
-        code: Right,
+        code: Char('l'),
         modifiers: (
             bits: 0,
         ),
     ),
     focus_left: (
-        code: Left,
+        code: Char('h'),
         modifiers: (
             bits: 0,
         ),
     ),
     focus_above: (
-        code: Up,
+        code: Char('k'),
         modifiers: (
             bits: 0,
         ),
     ),
     focus_below: (
-        code: Down,
+        code: Char('j'),
         modifiers: (
             bits: 0,
         ),
@@ -78,9 +78,9 @@
         ),
     ),
     exit_popup: (
-        code: Esc,
+        code: Char('q'),
         modifiers: (
-            bits: 0,
+            bits: 2,
         ),
     ),
     open_commit: (
@@ -96,21 +96,33 @@
         ),
     ),
     open_help: (
+        code: Char('H'),
+        modifiers: (
+            bits: 1,
+        ),
+    ),
+    move_left: (
         code: Char('h'),
         modifiers: (
             bits: 0,
         ),
     ),
-    move_left: (
-        code: Left,
+    move_right: (
+        code: Char('l'),
         modifiers: (
             bits: 0,
         ),
     ),
-    move_right: (
+    tree_collapse_recursive: (
+        code: Left,
+        modifiers: (
+            bits: 1,
+        ),
+    ),
+    tree_expand_recursive: (
         code: Right,
         modifiers: (
-            bits: 0,
+            bits: 1,
         ),
     ),
     home: (
@@ -126,25 +138,25 @@
         ),
     ),
     move_up: (
-        code: Up,
+        code: Char('k'),
         modifiers: (
             bits: 0,
         ),
     ),
     move_down: (
-        code: Down,
+        code: Char('j'),
         modifiers: (
             bits: 0,
         ),
     ),
     page_down: (
-        code: PageDown,
+        code: Char('f'),
         modifiers: (
             bits: 0,
         ),
     ),
     page_up: (
-        code: PageUp,
+        code: Char('b'),
         modifiers: (
             bits: 0,
         ),
@@ -165,6 +177,12 @@
         code: Enter,
         modifiers: (
             bits: 0,
+        ),
+    ),
+    blame: (
+        code: Char('B'),
+        modifiers: (
+            bits: 1,
         ),
     ),
     edit_file: (
@@ -191,6 +209,18 @@
             bits: 0,
         ),
     ),
+    diff_stage_lines: (
+        code: Char('s'),
+        modifiers: (
+            bits: 0,
+        ),
+    ),
+    diff_reset_lines: (
+        code: Char('d'),
+        modifiers: (
+            bits: 0,
+        ),
+    ),
     stashing_save: (
         code: Char('s'),
         modifiers: (
@@ -209,6 +239,12 @@
             bits: 0,
         ),
     ),
+    stash_apply: (
+        code: Char('a'),
+        modifiers: (
+            bits: 0,
+        ),
+    ),
     stash_open: (
         code: Right,
         modifiers: (
@@ -222,9 +258,9 @@
         ),
     ),
     cmd_bar_toggle: (
-        code: Char('.'),
+        code: Char(':'),
         modifiers: (
-            bits: 0,
+            bits: 1,
         ),
     ),
     log_tag_commit: (
@@ -269,16 +305,58 @@
             bits: 1,
         ),
     ),
+    merge_branch: (
+        code: Char('m'),
+        modifiers: (
+            bits: 0,
+        ),
+    ),
+    tags: (
+        code: Char('T'),
+        modifiers: (
+            bits: 1,
+        ),
+    ),
+    delete_tag: (
+        code: Char('D'),
+        modifiers: (
+            bits: 1,
+        ),
+    ),
+    select_tag: (
+        code: Enter,
+        modifiers: (
+            bits: 0,
+        ),
+    ),
     push: (
         code: Char('p'),
         modifiers: (
             bits: 0,
         ),
     ),
-    fetch: (
+    open_file_tree: (
+        code: Char('F'),
+        modifiers: (
+            bits: 1,
+        ),
+    ),
+    force_push: (
+        code: Char('P'),
+        modifiers: (
+            bits: 1,
+        ),
+    ),
+    pull: (
         code: Char('f'),
         modifiers: (
             bits: 0,
+        ),
+    ),
+    abort_merge: (
+        code: Char('M'),
+        modifiers: (
+            bits: 1,
         ),
     ),
 )
