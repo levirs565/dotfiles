@@ -1,0 +1,20 @@
+[Unit]
+Description=One Drive (rclone)
+Documentation=man:rclone(1)
+# Make sure we have network enabled
+After=network-online.target
+Wants=network-online.target
+AssertPathIsDirectory=%h/OneDrive
+
+[Service]
+Type=notify
+ExecStart=/usr/bin/rclone mount --vfs-cache-mode full "Levi OneDrive":  %h/OneDrive
+# Perform lazy unmount
+ExecStop=/usr/bin/fusermount -zu %h/OneDrive
+# Restart the service whenever rclone exists with non-zero exit code
+Restart=on-failure
+RestartSec=15
+
+[Install]
+# Autostart after reboot
+WantedBy=default.target
