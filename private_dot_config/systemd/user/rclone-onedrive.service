@@ -8,7 +8,7 @@ AssertPathIsDirectory=%h/OneDrive
 
 [Service]
 Type=notify
-ExecStart=/usr/bin/rclone mount --vfs-cache-mode full "Levi OneDrive":  %h/OneDrive
+ExecStart=/home/linuxbrew/.linuxbrew/bin/rclone mount --vfs-cache-mode full "Levi OneDrive":  %h/OneDrive
 # Perform lazy unmount
 ExecStop=/usr/bin/fusermount -zu %h/OneDrive
 # Restart the service whenever rclone exists with non-zero exit code

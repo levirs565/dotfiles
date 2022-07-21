@@ -8,7 +8,7 @@ AssertPathIsDirectory=%h/GoogleDrive
 
 [Service]
 Type=notify
-ExecStart=/usr/bin/rclone mount --vfs-cache-mode full "Levi GoogleDrive":  %h/GoogleDrive
+ExecStart=/home/linuxbrew/.linuxbrew/bin/rclone mount --vfs-cache-mode full "Levi GoogleDrive":  %h/GoogleDrive
 # Perform lazy unmount
 ExecStop=/usr/bin/fusermount -zu %h/GoogleDrive
 # Restart the service whenever rclone exists with non-zero exit code
