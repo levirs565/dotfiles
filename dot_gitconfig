@@ -1,3 +1,5 @@
 [user]
 	name = Levi Rizki Saputra
 	email = 42236775+levirs565@users.noreply.github.com
+[init]
+    defaultBranch = main
