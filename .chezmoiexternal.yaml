@@ -6,3 +6,19 @@
   refreshPeriod: 168h
   include:
     - "*/id_ID.*"
+.config/inkscape/extensions/inkscapeMadeEasy:
+  type: archive
+  url: https://github.com/fsmMLK/inkscapeMadeEasy/archive/refs/heads/master.zip
+  exact: true
+  stripComponents: 2
+  refreshPeriod: 168h
+  include:
+    - "*/latest/**"
+.config/inkscape/extensions/inkscapeCartesianPlotFunction2D:
+  type: archive
+  url: https://github.com/fsmMLK/inkscapeCartesianPlotFunction2D/archive/refs/heads/master.zip
+  exact: true
+  stripComponents: 2
+  refreshPeriod: 168h
+  include:
+    - "*/latest/**"
