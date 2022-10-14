@@ -22,3 +22,19 @@
   refreshPeriod: 168h
   include:
     - "*/latest/**"
+.config/inkscape/extensions/inkscapeDimensions:
+  type: archive
+  url: https://github.com/fsmMLK/inkscapeDimensions/archive/refs/heads/master.zip
+  exact: true
+  stripComponents: 2
+  refreshPeriod: 168h
+  include:
+    - "*/latest/**"
+.config/inkscape/extensions/inkscapeCircuitSymbols:
+  type: archive
+  url: https://github.com/fsmMLK/inkscapeCircuitSymbols/archive/refs/heads/master.zip
+  exact: true
+  stripComponents: 2
+  refreshPeriod: 168h
+  include:
+    - "*/latest/**"
